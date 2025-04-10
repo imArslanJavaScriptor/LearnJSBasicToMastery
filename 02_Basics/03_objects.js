@@ -1,38 +1,31 @@
-// singleton
-// Object.create
+// singleton ==> // Object.create
 
 // object literals
-
 const mySym = Symbol("key1")
+const mySymbolValue = Symbol("Arslan")
 
-
-const JsUser = {
-    name: "Hitesh",
-    "full name": "Hitesh Choudhary",
-    [mySym]: "mykey1",
-    age: 18,
-    location: "Jaipur",
-    email: "hitesh@google.com",
+const newUserObj = {
+    userName: mySymbolValue, // here i used symbol as value
+    [mySymbolValue] : "is a King", // here is used symbol as key
+    userAge: 20,
+    "user Profession": "Software Developer",
+    userEmail:"im@Arslan.com",
     isLoggedIn: false,
-    lastLoginDays: ["Monday", "Saturday"]
+    lastLoginDays: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    userLocation: "Lahore Punjab Pakistan"
 }
 
-// console.log(JsUser.email)
-// console.log(JsUser["email"])
-// console.log(JsUser["full name"])
-// console.log(JsUser[mySym])
+console.log(newUserObj)
+console.log(newUserObj.userAge)
+console.log(newUserObj["user Profession"])
 
-JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com"
-// console.log(JsUser);
 
-JsUser.greeting = function(){
-    console.log("Hello JS user");
+// Object.freeze(newUserObj)
+newUserObj.userEmail = "Arslan@imArslan.com"
+console.log(newUserObj.userEmail)
+
+
+newUserObj.jobRole = function() {
+    console.log(`Your'e a ${this["user Profession"]}`)
 }
-JsUser.greetingTwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
-}
-
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+newUserObj.jobRole()

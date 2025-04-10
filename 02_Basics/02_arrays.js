@@ -2,30 +2,32 @@ const marvel_heros = ["thor", "Ironman", "spiderman"]
 const dc_heros = ["superman", "flash", "batman"]
 
 // marvel_heros.push(dc_heros)
-
-// console.log(marvel_heros);
-// console.log(marvel_heros[3][1]);
+// console.log(marvel_heros[3][2]);
 
 // const allHeros = marvel_heros.concat(dc_heros)
 // console.log(allHeros);
 
-const all_new_heros = [...marvel_heros, ...dc_heros]
+const allHerosTogether =[...marvel_heros, ...dc_heros]
+console.log(allHerosTogether);
 
-// console.log(all_new_heros);
+const deeplyNestedArray = [1,2,3, ["One", "Tow", "Three", "Four"], "Superman", ["Arslan", ["Arslan is a Good Boy", [1,2,3,4,5]]]]
+// const real_another_array = another_array.flat(Infinity)
 
-const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
+let flatedArr = deeplyNestedArray.flat(3)
+// console.log(flatedArr.find(item => item === "Arslan"))
 
-const real_another_array = another_array.flat(Infinity)
-console.log(real_another_array);
+// console.log(Array.isArray("Hitesh"))
+console.log(Array.isArray("Arslan"))
+console.log(Array.from("Arslan is a Good Boy"))
 
+// console.table(typeof(Array.isArray("Arslan")))
+// console.table(typeof(Array.from("Arslan is a Good Boy")))
 
-
-console.log(Array.isArray("Hitesh"))
-console.log(Array.from("Hitesh"))
-console.log(Array.from({name: "hitesh"})) // interesting
+console.log("Intresting",  Array.from({myName: "Arslan"}))
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
+let score4 = 500
 
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1, score2, score3, score4))
