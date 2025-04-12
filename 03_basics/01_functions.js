@@ -1,70 +1,80 @@
-
-function sayMyName(){
-    console.log("H");
-    console.log("I");
-    console.log("T");
-    console.log("E");
-    console.log("S");
-    console.log("H");
+function sayMyName() {
+    console.log("A")
+    console.log("r")
+    console.log("s")
+    console.log("l")
+    console.log("a")
+    console.log("n")
 }
-
-// sayMyName()
-
-// function addTwoNumbers(number1, number2){
-
-//     console.log(number1 + number2);
-// }
+sayMyName()
 
 function addTwoNumbers(number1, number2){
-
-    // let result = number1 + number2
-    // return result
-    return number1 + number2
+    console.log(number1 + number2);
 }
 
-const result = addTwoNumbers(3, 5)
+function addTwoNumbersAndReturn(number1, number2){
+    let result = number1 + number2
+    return result
+    return number1 + number2 // all the code after return stgatmenet won't be execute
+}
 
-// console.log("Result: ", result);
+const result = addTwoNumbers(3, 5) // Undefined BCZ it does not return anything
+const result2 = addTwoNumbersAndReturn(20, 10) // Output: 30
+console.log("Result 1:", result)
+console.log("Result 2:", result2)
 
+// function loginUserMessage(username) {
+//     if(!username) {
+//         console.("Please Enter username")
+//         return
+//     }
+//     return (username)
+// }
 
-function loginUserMessage(username = "sam"){
-    if(!username){
-        console.log("PLease enter a username");
-        return
+function loginUserMessage(username) {
+    if(!username) {
+        return "Please Enter username"
     }
-    return `${username} just logged in`
+    return `${username} Welcome to our Platform`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage())
+// console.log(loginUserMessage("Arslan King"))
 
 
-function calculateCartPrice(val1, val2, ...num1){
-    return num1
+// function calculateCartPrice(val1, val2, ...num1){
+//     return num1
+// }
+
+function calculateProductsPrice(...product) {
+    let total = product.reduce((acc, curr) => acc + curr, 0)
+    return total
+}
+let yourBill = calculateProductsPrice(100,200,300,550,450)
+console.log("Your Bill", yourBill)
+
+
+const userObj = {
+    userName: "Arslan",
+    price: 1200
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
-
-const user = {
-    username: "hitesh",
-    prices: 199
+function handleObject(anyobject) {
+    return `Username is ${anyobject.userName} and User Bill is: ${anyobject.price}`
 }
 
-function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
-}
+console.log(handleObject(userObj)) // You have Passed Object Refference Here
+console.log(handleObject({ 
+    userName: "HM-Arslan",
+    price: 2000
+})) // You have Passed full Object Defination Here.
 
-// handleObject(user)
-handleObject({
-    username: "sam",
-    price: 399
-})
+const newArray = [100,200,300,400,500,600]
+const newArray2 = ["Arslan","King",300,400,500,600]
 
-const myNewArray = [200, 400, 100, 600]
-
-function returnSecondValue(getArray){
+function returnSecondValue(getArray) {
     return getArray[1]
 }
 
-// console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+console.log(returnSecondValue(newArray))
+console.log(returnSecondValue(newArray2))
