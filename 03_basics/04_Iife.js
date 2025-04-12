@@ -1,11 +1,26 @@
 // Immediately Invoked Function Expressions (IIFE)
 
-
-(function chai(){
-    // named IIFE
-    console.log(`DB CONNECTED`);
+// ✅ Corrected Named Function IIFE 
+(function greeting() {
+    console.log( "Welcome Back To Heaven Sir")
 })();
 
-( (name) => {
-    console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh')
+// ✅ Corrected Arrow Function IIFE
+(() => (
+    console.log("DB Connected:: Successfully")
+))();
+
+
+// ❌ Invalid: IIFE can't start with `let`
+// IIFE should be wrapped in parentheses and executed directly.
+// There is no need to hold its reference in a variable.
+/*
+(let newDBConnection = () => {
+    console.log("New DB Connection Succeed");
+})()
+*/
+
+// ✅ Corrected Arrow Function IIFE
+(() => {
+    console.log("New DB Connection Succeeded");
+})();

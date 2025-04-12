@@ -1,53 +1,54 @@
-const user = {
-    username: "hitesh",
-    price: 999,
-
+const userObject = {
+    userName: "Arslan",
+    age: 20,
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
-        console.log(this);
+        return `Hi, My Name is ${this.userName} and i'm ${this.age} now.`
     }
-
 }
 
-// user.welcomeMessage()
-// user.username = "sam"
-// user.welcomeMessage()
+console.log(userObject.welcomeMessage())
+userObject.userName = "Hadi"
+console.log(userObject.welcomeMessage())
 
-// console.log(this);
 
-// function chai(){
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
+console.log(this);
 
-// chai()
-
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-const chai =  () => {
-    let username = "hitesh"
-    console.log(this);
+function EveryDayKiChai() {
+    let userName = "Alice Bob"
+    console.log(this.userName)    
 }
 
+function tellMyName(yourName) {
+    return `Your Name is: ${this.yourName}`
+}
+console.log(tellMyName("Arslan"))
 
-// chai()
+const orderChai = () => {
+    let chaiName = "Green Tea"
+    console.log(this.chaiName)
+}
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
+orderChai()
 
-// const addTwo = (num1, num2) =>  num1 + num2
+const check = () => {
+    let myName=  "Arslan"
+    let myAge = 20
+    console.log(this)
+}
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+check()
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addition = (num1, num2) => {
+    return num1 + num2 
+}
+console.log(addition(20, 50))
 
+const addition2 = (num1, num2) => num1 + num2
+console.log(addition2(200, 300))
 
-console.log(addTwo(3, 4))
+const mySelf = (name, age, profession) => (`My Name is ${name} i'm a ${age} year's old ${profession} `)
 
+console.log(mySelf("Arslan", 20, "Sofware Engineer"))
 
 // const myArray = [2, 5, 3, 7, 8]
 
