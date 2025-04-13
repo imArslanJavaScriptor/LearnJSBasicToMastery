@@ -27,3 +27,5 @@ switch (month) {
         console.log("default case match");
         break;
 }
+
+// 1 bar jo bhi case match krgia us ke bad ka sara code execute ho jata ha execpt default statemnt isi lye break keyword use krte ha.
