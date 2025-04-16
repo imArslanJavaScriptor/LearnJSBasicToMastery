@@ -1,11 +1,23 @@
+// 1: Basic Syntax
 // switch (key) {
 //     case value:
-        
 //         break;
-
 //     default:
 //         break;
 // }
+
+const winnerName = "Arslan"
+switch (winnerName) {
+    case "Arslan":
+        console.log("Arslan is the Winner")
+        break;
+    case "Shan": 
+    console.log("Shan is the winner")
+    break
+    default:
+        console.log("Not Found")
+        break;
+}
 
 const month = "march"
 
