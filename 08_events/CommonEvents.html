@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Properties Demo</title>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+  <input type="text" id="myInput" placeholder="Type here" />
+
+  <script>
+    const button = document.getElementById('myButton');
+    const input = document.getElementById('myInput');
+
+    // Mouse event listener
+    button.addEventListener('click', (e) => {
+      console.log('type:', e.type);
+      console.log('timestamp:', e.timeStamp);
+      console.log('defaultPrevented:', e.defaultPrevented);
+      console.log('target:', e.target);
+      console.log('toElement:', e.toElement);
+      console.log('srcElement:', e.srcElement);
+      console.log('currentTarget:', e.currentTarget);
+      console.log('clientX:', e.clientX);
+      console.log('clientY:', e.clientY);
+      console.log('screenX:', e.screenX);
+      console.log('screenY:', e.screenY);
+    });
+
+    // Keyboard event listener
+    input.addEventListener('keydown', (e) => {
+      console.log('altKey:', e.altKey);
+      console.log('ctrlKey:', e.ctrlKey);
+      console.log('shiftKey:', e.shiftKey);
+      console.log('keyCode:', e.keyCode);
+    });
+  </script>
+</body>
+</html>
