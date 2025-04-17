@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chai aur code | DOM</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li{
+            list-style: none;
+            padding: 10px;
+            background-color: royalblue;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body style="background-color: #212121; color: #fff;">
     <ul class="language">
@@ -12,35 +29,45 @@
     </ul>
 </body>
 <script>
-    function addLanguage(langName){
-        const li = document.createElement('li');
-        li.innerHTML = `${langName}`
-        document.querySelector('.language').appendChild(li)
+    function AddLanguage(langName) {
+        const listItem = document.createElement("li")
+        listItem.innerText = `${langName}`
+        document.querySelector(".language").appendChild(listItem)
     }
-    addLanguage("python")
-    addLanguage("typescript")
 
-    function addOptiLanguage(langName){
-        const li = document.createElement('li');
+    AddLanguage("TypeScript")
+    AddLanguage("Go Lang")
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement("li")
         li.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(li)
+        document.querySelector(".language").appendChild(li)
     }
     addOptiLanguage('golang')
+    addOptiLanguage("C++")
+    addOptiLanguage("C#")
+
+    
 
     //Edit
+    // Method One 
     const secondLang = document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML = "Swift"
     console.log(secondLang);
-    //secondLang.innerHTML = "Mojo"
-    const newli = document.createElement('li')
-    newli.textContent = "Mojo"
-    secondLang.replaceWith(newli)
+
+    // Method Two 
+    const newListItem = document.createElement("li")
+    newListItem.textContent = "Ruby"
+    secondLang.replaceWith(newListItem)
 
     //edit
     const firstLang = document.querySelector("li:first-child")
+    console.log(firstLang)
     firstLang.outerHTML = '<li>TypeScript</li>'
 
     //remove
     const lastLang = document.querySelector('li:last-child')
+    console.log(lastLang)
     lastLang.remove()
 
 

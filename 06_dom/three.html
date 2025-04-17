@@ -14,12 +14,18 @@
     console.log(div);
     div.className = "main"
     div.id = Math.round(Math.random() * 10 + 1)
+    console.log(div.id)
     div.setAttribute("title", "generated title")
+    div.setAttribute("class", "arslan king box")
+    console.log(div.className)
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
     // div.innerText = "Chai aur code"
     const addText = document.createTextNode("Chai aur code")
+    const divInnerText = document.createElement("p")
+    divInnerText.innerText = "Arslan is a Good Boy"
     div.appendChild(addText)
+    div.appendChild(divInnerText)
 
     document.body.appendChild(div)
 </script>
