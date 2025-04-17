@@ -1,28 +1,36 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
-// const values = coding.forEach( (item) => {
-//     //console.log(item);
-//     return item
-// } )
+const valuesWithForEach = coding.forEach( (item) => {
+    // console.log(item);  Output: Print values in console
+    return item
+} )
 
-// console.log(values);
+console.log("Using ForEach: ", valuesWithForEach);
+
+const valuesWithMap = coding.map( (item) => {
+    // console.log(item);  Output: Print values in console
+    return item
+} )
+
+console.log("Using Map: ", valuesWithMap);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+const filteredNumbers = myNums.filter((item) => {
+  return item > 5
+})
+console.log(filteredNumbers)
 
-// const newNums = []
+const newNums = []
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+myNums.forEach( (num) => {
+    if (num % 2== 0 ) {
+        newNums.push(num)
+    }
+} )
 
-// console.log(newNums);
+console.log("Even Numbers",newNums);
 
 
 const books = [

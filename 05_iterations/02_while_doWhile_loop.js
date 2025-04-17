@@ -1,20 +1,19 @@
-
+// 1: while Loop
 let index = 0
 // while (index <= 10) {
 //     console.log(`Value of index is ${index}`);
 //     index = index + 2
 // }
 
-let myArray = ['flash', "batman", "superman"]
-
-let arr = 0
-while (arr < myArray.length) {
-    //console.log(`Value is ${myArray[arr]}`);
-    arr = arr + 1
+let fruitArr = ["Apple", "Mango", "Banana", "Orange"]
+while (index < fruitArr.length) {
+    console.log(fruitArr[index])
+    index++   
 }
 
-let score = 11
 
+// 2: do while Loop
+let score = 20
 do {
     console.log(`Score is ${score}`);
     score++

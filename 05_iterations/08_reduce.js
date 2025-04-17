@@ -1,13 +1,14 @@
-const myNums = [1, 2, 3]
+const myNums = [100, 200, 400]
 
-// const myTotal = myNums.reduce(function (acc, currval) {
-//     console.log(`acc: ${acc} and currval: ${currval}`);
-//     return acc + currval
-// }, 0)
+const myTotal = myNums.reduce(function (acc, currval) {
+    console.log(`Accumulator: ${acc} and Current Value: ${currval}`);
+    return acc + currval
+}, 0) // Here we set the default value of Accumulator to 0
 
-const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
+const reducedValue = myNums.reduce((acc, currVal) => acc +currVal, 0)
 
-console.log(myTotal);
+console.log("MyTotal:", myTotal);
+console.log("reducedValue:", reducedValue );
 
 
 const shoppingCart = [
@@ -29,6 +30,6 @@ const shoppingCart = [
     },
 ]
 
-const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+const totalPrice  = shoppingCart.reduce((acc, currItem) => acc + currItem.price, 0)
 
-console.log(priceToPay);
+console.log("Your Total:", totalPrice)

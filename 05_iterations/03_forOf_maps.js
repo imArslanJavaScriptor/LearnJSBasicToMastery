@@ -1,32 +1,39 @@
-// for of
+// for of Loop
 
 // ["", "", ""]
 // [{}, {}, {}]
 
-const arr = [1, 2, 3, 4, 5]
-
-for (const num of arr) {
-    //console.log(num);
+// Using with array
+const numbers = [1, 2, 3, 4, 5]
+for (const number of numbers) {
+    console.log(number);
 }
 
-const greetings = "Hello world!"
+// Using with string
+const greetings = "Blessings For You"
 for (const greet of greetings) {
-    //console.log(`Each char is ${greet}`)
+    let refined = greet.includes(" ") ? "Space" : greet
+    console.log(`Each char is ${refined}`)
 }
 
-// Maps
-
+// Maps ==> For Unique values and Store Data in Order
+const mapObject = new Map()
+mapObject.set("Name","Arslan")
+mapObject.set("Age", 20)
+mapObject.set("Profession", "Software Engineering")
+// mapObject.delete("Name")
+// mapObject.clear()
+console.log(mapObject.entries())
+console.log("Data Type of Map:", typeof(mapObject))
+console.log(mapObject)
 const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
 map.set('Fr', "France")
 map.set('IN', "India")
 
-
-// console.log(map);
-
-for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+for (const [key, value] of mapObject) {
+    console.log(`Key: ${key} and Value: ${value}`)
 }
 
 const myObject = {
@@ -34,7 +41,13 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
+const userObj = {
+    name: "Arslan",
+    age: 20,
+    profession: "Software Engineer"
+}
+
+
+// for (const [key, value] of userObj) {
 //     console.log(key, ':-', value);
-    
 // }
