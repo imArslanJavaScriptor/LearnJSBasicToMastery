@@ -15,14 +15,25 @@ body {
 }
 
 section {
-  border: 2px solid white;
-  margin: 20px 0;
+  background: #1e1e1e;
+  color: #fff;
   padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-section h1 {
-  margin: 10px 0;
+h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
 }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 
 .scroll-indicator {
   height: 5px;
