@@ -24,3 +24,8 @@ function User(email, password){
 const chai = new User("chai@chai.com", "chai")
 
 console.log(chai.email);
+
+// Master English Communication in 45 Days:
+// https://www.youtube.com/watch?v=riv8aZrlvmM
+// Master English Communication in 21 Days: 
+// https://www.youtube.com/watch?v=tj2SyoBExZc
