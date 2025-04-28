@@ -1,32 +1,33 @@
-function multipleBy5(num) {
-  return num * 5;
+function multipleBy(num1, num2) {
+  return num1 * num2
 }
 
-multipleBy5.power = 2;
+multipleBy.power = 5
 
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
-console.log(multipleBy5.prototype);
+console.log(multipleBy(10,2))
+console.log(multipleBy.power)
+console.log(multipleBy.prototype)
 
-function createUser(username, score) {
-  this.username = username;
-  this.score = score;
+function createUser(userName, score) {
+  this.userName = userName
+  this.score = score
 }
 
-createUser.prototype.increment = function () {
-  this.score++;
-};
-createUser.prototype.printMe = function () {
-  console.log(`price is ${this.score}`);
-};
+createUser.prototype.increment = function() {
+   return this.score++
+}
 
-const chai = new createUser("chai", 25);
-const tea = createUser("tea", 250);
+createUser.prototype.printMe = function() {
+  console.log(`Score is ${this.score}`)
+}
 
-chai.printMe();
+const userOne = new createUser("Anonymous", 30)
+const userTwo = new createUser("Anonymous", 50)
+userOne.increment()
+userOne.increment()
+userOne.printMe()
 
 /*
-
 Here's what happens behind the scenes when the new keyword is used:
 
 A new object is created: The new keyword initiates the creation of a new JavaScript object.

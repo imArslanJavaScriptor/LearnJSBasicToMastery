@@ -1,39 +1,34 @@
 const user = {
-  username: "hitesh",
-  loginCount: 8,
-  signedIn: true,
+  userName: "Arslan",
+  loginStatus: true,
+  loginDevice: "Computer",
 
-  getUserDetails: function () {
-    //console.log("Got user details from database");
-    // console.log(`Username: ${this.username}`);
-    console.log(this);
-  },
-};
-
-//console.log(user.username)
-//console.log(user.getUserDetails());
-// console.log(this);
-
-function User(username, loginCount, isLoggedIn) {
-  this.username = username;
-  this.loginCount = loginCount;
-  this.isLoggedIn = isLoggedIn;
-
-  this.greeting = function () {
-    console.log(`Welcome ${this.username}`);
-  };
-
-  return this;
+  getUserDetails: function() {
+    console.log(`Got User Details`)
+    console.log(`UserName: ${this.userName}`)
+    console.log(this)
+  }
 }
 
-// With New Keyword
-// const userOne = new User("hitesh", 12, true)
-// const userTwo = new User("ChaiAurCode", 11, false)
+// user.getUserDetails()
 
-// Without New Keyword
-const userOne = User("hitesh", 12, true);
-const userTwo = User("ChaiAurCode", 11, false);
-console.log(userOne);
-console.log(userTwo);
+function UserInfo(userName, loginStatus, userLocation) {
+  this.userName = userName;
+  this.loginStatus = loginStatus
+  this.userLocation = userLocation
 
-// console.log(userOne.constructor);
+  this.welcomeUser = function() {
+    console.log(`Welcome ${this.userName}`)
+  }
+
+  // return [userName, loginStatus, userLocation]
+}
+// console.log(UserInfo("Arslan", true, "Lahore"))
+
+// With or Without New Keyword
+const funcOne = UserInfo("Arslan", true, 'Karachi')
+const funcTwo = new UserInfo("Arslan", true, 'London')
+
+console.log(funcOne)
+console.log(funcTwo)
+console.log(UserInfo.constructor);
