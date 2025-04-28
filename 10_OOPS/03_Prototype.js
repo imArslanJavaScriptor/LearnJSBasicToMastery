@@ -1,65 +1,62 @@
-// let myName = "hitesh     "
-// let mychannel = "chai     "
+let myName = "Arslan"
+let myYouTubeChannelName = "imArslan"
+let myHeros = ["Super Man", "Bat's Man"];
 
-// console.log(myName.trueLength);
-
-let myHeros = ["thor", "spiderman"];
 
 let heroPower = {
-  thor: "hammer",
-  spiderman: "sling",
+  superMan: "Laser",
+  batMan: "Un-Betable Will Power",
 
-  getSpiderPower: function () {
-    console.log(`Spidy power is ${this.spiderman}`);
+  getSuperManPower: function() {
+    return `Super Man Have ${this.superMan} Power`
   },
-};
+  getBatManPower: function() {
+    return  `Bat Man Have ${this.batMan}`
+  }
+}
 
-Object.prototype.hitesh = function () {
-  console.log(`hitesh is present in all objects`);
-};
+Object.prototype.ars = function() {
+  return `Arslan is Present in All Objects`
+}
+Array.prototype.willPowerQuote = function () {
+  return `Where there is a will there is a way`
+}
 
-Array.prototype.heyHitesh = function () {
-  console.log(`Hitesh says hello`);
-};
-
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+console.log(heroPower.ars())
+console.log(myHeros.willPowerQuote())
 
 // inheritance
-
 const User = {
-  name: "chai",
-  email: "chai@google.com",
-};
+  name: "Arslan",
+  email: "Arslan@King.com"
+}
 
 const Teacher = {
-  makeVideo: true,
-};
+  makeVideo: true
+}
 
 const TeachingSupport = {
-  isAvailable: false,
-};
-
-const TASupport = {
-  makeAssignment: "JS assignment",
+  isAvailable: false
+}
+const STSupport = {
+  makeAssignment: "JS Assignment",
   fullTime: true,
-  __proto__: TeachingSupport,
-};
+  __proto__:TeachingSupport
+}
+Teacher.__proto__ = User
 
-Teacher.__proto__ = User;
+// Modern Syntax
+Object.setPrototypeOf(TeachingSupport, Teacher)
+console.log(Object.getPrototypeOf(TeachingSupport))
 
-// modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher);
 
 let anotherUsername = "ChaiAurCode     ";
 
-String.prototype.trueLength = function () {
-  console.log(`${this}`);
-  console.log(`True length is: ${this.trim().length}`);
-};
+String.prototype.trueLength = function() {
+  console.log (`True Length is: ${this.trim().length}`)
+}
 
-anotherUsername.trueLength();
-"hitesh".trueLength();
-"iceTea".trueLength();
+
+anotherUsername.trueLength()
+myName.trueLength()
+myYouTubeChannelName.trueLength()
